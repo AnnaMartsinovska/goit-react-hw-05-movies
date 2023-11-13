@@ -37,7 +37,7 @@ const Cast = () => {
                 width={150}
               />
             ) : (
-              'Sorry, the photo is not available...'
+              <img src="/src/img/img.jpg" alt={actor.name} width={150} />
             )}
 
             <p>{actor.name}</p>
