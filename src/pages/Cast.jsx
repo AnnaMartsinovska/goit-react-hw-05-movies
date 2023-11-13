@@ -30,11 +30,16 @@ const Cast = () => {
       <ul>
         {cast?.map(actor => (
           <li key={actor.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-              alt={actor.name}
-              width={150}
-            />
+            {actor.profile_path ? (
+              <img
+                src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
+                alt={actor.name}
+                width={150}
+              />
+            ) : (
+              'Sorry, the photo is not available...'
+            )}
+
             <p>{actor.name}</p>
             <p>Character: {actor.character}</p>
           </li>

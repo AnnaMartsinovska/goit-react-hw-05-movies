@@ -16,17 +16,6 @@ const MovieDetail = () => {
   const location = useLocation();
   const goBackRef = useRef(location.state?.from || '/');
 
-  //   const [movie, setMovie] = useState(null);
-  //   const [error, setError] = useState('');
-  //   useEffect(() => {
-  //     fetchMovieById(movieId)
-  //       .then(data => {
-  //         setMovie(data);
-  //       })
-  //       .catch(error => {
-  //         setError(error.message);
-  //       });
-  //   }, [movieId]);
   const [movie] = useHttp(fetchMovieById, movieId);
 
   if (!movie) {
