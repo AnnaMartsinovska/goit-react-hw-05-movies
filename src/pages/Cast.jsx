@@ -34,7 +34,7 @@ const Cast = () => {
               src={
                 actor.profile_path
                   ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
-                  : '/src/img/img.jpg'
+                  : 'https://st3.depositphotos.com/2546551/18320/v/1600/depositphotos_183205204-stock-illustration-male-avatar-profile-picture-silhouette.jpg'
               }
               alt={actor.name}
               width={150}
