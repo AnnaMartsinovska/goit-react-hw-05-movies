@@ -1,13 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import styled from 'styled-components';
+import { Suspense } from 'react';
+import { Blocks } from 'react-loader-spinner';
 
 export const Layout = () => {
   return (
     <StyledLayout>
       <Navigation />
       <StyledOutlet>
-        <Outlet />
+        <Suspense fallback={<Blocks />}>
+          <Outlet />
+        </Suspense>
       </StyledOutlet>
     </StyledLayout>
   );
